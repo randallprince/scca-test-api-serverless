@@ -1,6 +1,6 @@
 {
   "name": "scca-test-api-serverless",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "api test",
   "main": "handler.js",
   "scripts": {
