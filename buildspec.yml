@@ -15,7 +15,7 @@ phases:
   build:
     commands:
       - echo "**************** Stage - Build ****************"
-      - sls deploy -s ${self:env.variables.env}
+      - sls deploy -s dev
 
 artifacts:
   files:
