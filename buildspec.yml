@@ -1,0 +1,14 @@
+version: 0.2
+env:
+  variables:
+    key: "value"
+
+phases:
+  install:
+    commands:
+      - echo "**************** Stage - Install ****************"
+      - npm install
+  build:
+    commands:
+      - echo "**************** Stage - Build ****************"
+      - npm build
