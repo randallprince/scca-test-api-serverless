@@ -21,10 +21,6 @@ phases:
       - npm test
   post_build:
     commands:
+      - echo "**************** Stage - Post-Build (Deploy) ****************"
       - serverless config credentials --profile scca --provider aws --key $AWS_ACCESS_KEY_ID_PARAM --secret $AWS_SECRET_ACCESS_KEY_PARAM
       - sls deploy -s dev
-
-artifacts:
-  files:
-    - '**/*'
-  base-directory: .serverless
