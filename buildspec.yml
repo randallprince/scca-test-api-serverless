@@ -10,7 +10,7 @@ env:
 phases:
   install:
     runtime-versions:
-      nodejs: 10
+      nodejs: 12
     commands:
       - echo "**************** Stage - Install ****************"
       - npm install serverless -g
@@ -18,6 +18,9 @@ phases:
   build:
     commands:
       - echo "**************** Stage - Build ****************"
+      - npm test
+  deploy:
+    commands:
       - serverless config credentials --profile scca --provider aws --key $AWS_ACCESS_KEY_ID_PARAM --secret $AWS_SECRET_ACCESS_KEY_PARAM
       - sls deploy -s dev
 
