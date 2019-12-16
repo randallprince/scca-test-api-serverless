@@ -18,8 +18,7 @@ phases:
   build:
     commands:
       - echo "**************** Stage - Build ****************"
-      - export AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID_PARAM
-      - export AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY_PARAM
+      - serverless config credentials --provider aws --key $AWS_ACCESS_KEY_ID_PARAM --secret $AWS_SECRET_ACCESS_KEY_PARAM
       - sls deploy -s dev
 
 artifacts:
